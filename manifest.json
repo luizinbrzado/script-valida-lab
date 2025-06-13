@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Validações Nuubes",
+    "version": "1.0",
+    "description": "Cria chamado para validações de laboratórios semi-automático no Nuubes.",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://app.nuubes.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}

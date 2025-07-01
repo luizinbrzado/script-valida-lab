@@ -40,12 +40,12 @@ function executarValidacoesScript() {
     const VINICIUS = 151422;
 
     // Validação de laboratórios
-    const VALIDADORES = [RAUL, LUIZ, NICOLAS, MATHEUS];
+    const VALIDADORES = [LUIZ, RAUL, MATHEUS, NICOLAS];
     const LABS = [
-        [1, 2],
+        [1, 2, 10],
         [3, 4],
         [5, 6],
-        [7, 8],
+        [7, 8, 9],
     ];
 
     // Esperar Nuubes carregar
@@ -78,7 +78,7 @@ function executarValidacoesScript() {
 
     async function executarValidacoes() {
         for (let i = 0; i < VALIDADORES.length; i++) {
-            for (let j = 0; j < 2; j++) {
+            for (let j = 0; j < LABS[i].length; j++) {
                 // Abrir Nova Ocorrência de algum TIPO acima
                 MANUTENCAO.click();
 
